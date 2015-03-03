@@ -1,4 +1,6 @@
 sudo cp inittab /etc/inittab
+sudo apt-get install python-smbus
+sudo apt-get install python-serial
 sudo apt-get install minicom
 minicom -b 38400 -o -D /dev/ttyAMA0
 #press UPSR to see minicom welcome screen
