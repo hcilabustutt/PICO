@@ -8,4 +8,6 @@ sudo hwclock -w
 sudo cp rc.local /etc/rc.local
 sudo i2cset -y 1 0x6b 0x00 0xff && python picofu.py -f UPS_PIco.hex
 sudo cp picofssd.py /home/pi/picofssd.py
+sudo python /home/pi/picofssd.py
+sudo apt-get autoremove
 sudo reboot
