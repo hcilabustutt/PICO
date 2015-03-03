@@ -15,6 +15,9 @@
 echo ds1307 0x68 > /sys/class/i2c-adapter/i2c-1/new_device
 hwclock -s
 
+#PICO FSSS
+sudo python /home/pi/picofssd.py
+
 # Print the IP address
 _IP=$(hostname -I) || true
 if [ "$_IP" ]; then
