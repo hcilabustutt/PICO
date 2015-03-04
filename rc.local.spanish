@@ -11,12 +11,7 @@
 #
 # By default this script does nothing.
 
-#PICO
-echo ds1307 0x68 > /sys/class/i2c-adapter/i2c-1/new_device
-hwclock -s
 
-#PICO FSSS
-sudo python /home/pi/picofssd.py
 
 # Print the IP address
 _IP=$(hostname -I) || true
@@ -24,8 +19,15 @@ if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
 
-
+#wikipedia
  /root/kiwix-serve --library /root/data/library/wikipedia_es_all_11_2013.zim.xml --port=8080 --daemon/
+ 
+#PICO
+echo ds1307 0x68 > /sys/class/i2c-adapter/i2c-1/new_device
+hwclock -s
+
+#PICO FSSS
+sudo python /home/pi/picofssd.py
 
 exit 0
 
