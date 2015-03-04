@@ -8,4 +8,5 @@ sudo cp raspi-blacklist.conf /etc/modprobe.d/raspi-blacklist.conf
 sudo cp picofssd.py /home/pi/picofssd.py
 sudo cp config.txt /boot/config.txt
 sudo cp modules /etc/modules
+sudo cp rc.local /etc/rc.local
 sudo reboot
